@@ -5,6 +5,7 @@ const PORT = process.env.PORT || 3000
 const cors = require('cors')
 const mongoose = require('mongoose');
 const profileRouter = require('./routes/profileRouter')
+const inspectionRouter = require('./routes/inspectionRouter')
 
 // middlewares
 
@@ -18,6 +19,8 @@ app.get('/', (req, res) => {
 })
 
 app.use('/api/v1', profileRouter)
+app.use('/api/v1', inspectionRouter)
+
 
 // error routes
 
