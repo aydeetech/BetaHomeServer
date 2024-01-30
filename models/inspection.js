@@ -25,7 +25,7 @@ location: {
     required: true
 },
 inspectionDate: {
-    type: String,
+    type: Date,
     required: true
 },
 inspectionTime: {
