@@ -49,7 +49,7 @@ const propertySchema = new Schema(
     },
     propertyType: {
       type: String,
-      default: "House",
+      default: "house",
       enum: ["house", "land"],
     },
 
@@ -64,31 +64,30 @@ const propertySchema = new Schema(
       default: "available",
       enum: ["available", "sold"],
     },
-    features: {
-      bathroom: {
-        type: Number,
-        default: 0,
-        min: 0,
-      },
-      bedroom: {
-        type: Number,
-        default: 0,
-        min: 0,
-      },
-      garage: {
-        type: Boolean,
-        default: false,
-      },
-      lot: {
-        type: Number,
-      },
-      squareFeet: {
-        type: Number,
-        min: 0,
-      },
+
+    bathroom: {
+      type: Number,
+      default: 0,
+      min: 0,
+    },
+    bedroom: {
+      type: Number,
+      default: 0,
+      min: 0,
+    },
+    garage: {
+      type: Boolean,
+      default: false,
+    },
+    lot: {
+      type: Number,
+    },
+    squareFeet: {
+      type: Number,
+      min: 0,
     },
 
-    salesSupport: ManagerSchema
+    salesSupport: ManagerSchema,
   },
   { timestamps: true }
 );
