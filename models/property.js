@@ -55,7 +55,7 @@ const propertySchema = new Schema(
 
     tags: {
       type: String,
-      enum: ["luxury", "affordable", "comfortable", "spacious"],
+      enum: ["luxury", "affordable", "comfortable", "spacious", "cozy"],
     },
 
     propertyStatus: {
