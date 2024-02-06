@@ -6,10 +6,16 @@ const {
   handleGetASingleProperty,
   handleGetAllProperties,
   handleGetRecentProperties,
+  handleFeaturedProperties,
 } = require("../controllers/propertyController");
 
-router.route("/").get(handleGetAllProperties).post(handleAddProperty);
+router
+  .route("/")
+  .get(handleGetAllProperties)
+  .post(handleAddProperty);
 router.route("/recent").get(handleGetRecentProperties);
+
+router.get("/featured", handleFeaturedProperties)
 router
   .route("/:propertyId")
   .get(handleGetASingleProperty)
