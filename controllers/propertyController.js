@@ -1,5 +1,6 @@
 const Property = require("../models/property");
 const cloudinary = require("cloudinary").v2;
+const fs = require("fs");
 
 const handleAddProperty = async (req, res) => {
   const {
