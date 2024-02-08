@@ -269,8 +269,8 @@ const handleGetASingleProperty = async (req, res) => {
 
 const handleFeaturedProperties = async (req, res) => {
   try {
-    const housedProperties = await Property.find({propertyType: "house"}).limit(3)
-  const landedProperties = await Property.find({propertyType: "land"}).limit(3)
+    const housedProperties = await Property.find({propertyType: "house"}).sort('-createdAt').limit(3)
+  const landedProperties = await Property.find({propertyType: "land"}).sort('-createdAt').limit(3)
 
   const featuredproperties = [...housedProperties, ...landedProperties]
   res.status(200).json({success: true, featuredproperties})
